@@ -191,3 +191,11 @@ Expected result → **Connection failed.**
 - **Port 22** was allowed to enable secure SSH connections.
 - This demonstrates how firewalls **secure systems by allowing only necessary services** and blocking others.
 
+----
+
+✅ Deliverables
+- 📸 Screenshots of UFW commands and Windows Firewall rules.
+- 📝 Configuration steps documented above.
+- 🔐 Demonstration of blocked Telnet and allowed SSH.
+- 📄 Final summary explaining firewall functionality.
+
