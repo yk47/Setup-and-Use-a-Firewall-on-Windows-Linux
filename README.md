@@ -71,30 +71,64 @@ sudo ufw delete <rule_number>
 
 ## 🪟 Windows (Windows Defender Firewall) Configuration
 ### 1. Open Windows Firewall
-
 Press ```Win + R``` → type ```wf.msc``` → Enter
 
+📸 Screenshot: Run Command
+
+<img width="399" height="277" alt="Run_Command" src="https://github.com/user-attachments/assets/0e863998-2e8b-4a3c-931b-7dab8ebae4c0" />
+
 📸 Screenshot: Windows Defender Firewall with Advanced Security window
+<img width="1047" height="784" alt="Windows Defender Firewall" src="https://github.com/user-attachments/assets/6e7afcb6-7c92-4b49-94ac-65ea480a1156" />
 
 
 ### 2. Block Telnet (Port 23)
 - Go to **Inbound Rules → New Rule**
 - Select **Port → TCP → Specific local port: 23**
-- Select Block the connection
-- Apply to Domain, Private, Public profiles
+- Select **Block the connection**
+- Apply to **Domain, Private, Public** profiles
 - Name rule: ```Block Telnet```
-  
-📸 Screenshot: Block Telnet rule visible in inbound rules list
+
+📸 Screenshot: **Inbound Rules → New Rule**
+
+<img width="1047" height="784" alt="new_rule" src="https://github.com/user-attachments/assets/47c6fc22-d539-4f7e-96a0-342b86544c04" />
+
+📸 Screenshot: **Port → TCP → Specific local port: 23**
+
+<img width="714" height="581" alt="Select_Port_23" src="https://github.com/user-attachments/assets/62365916-680a-4457-a7d4-c3af29096d62" />
+
+📸 Screenshot: **Block the connection**
+
+<img width="714" height="581" alt="block_connection" src="https://github.com/user-attachments/assets/7ba4b2ce-1a76-4a6e-be11-a5297a53bcb2" />
+
+📸 Screenshot: Apply to **Domain, Private, Public** profiles
+
+<img width="714" height="581" alt="Apply_all" src="https://github.com/user-attachments/assets/23dda2b9-7134-4bac-8eae-5d726543d69f" />
+
+📸 Screenshot: New Rule: ```Block Telnet```
+
+<img width="714" height="581" alt="Name_Block_Telnet" src="https://github.com/user-attachments/assets/f977614f-93f5-4640-a1b3-edb63519e160" />
+
+
 
 
 ### 3. Test Telnet Block
-Open ```cmd``` and try:
+Open ```cmd``` :
+
+📸 Screenshot: Open ```cmd```
+
+<img width="399" height="206" alt="cmd" src="https://github.com/user-attachments/assets/ee120cfb-0185-46cd-b7e1-7dd761f6e6ff" />
+
+And try:
 ```bash
 telnet localhost 23
 ```
 Expected result → **Connection failed.**
 
+
 📸 Screenshot: Telnet connection failed in cmd
+
+<img width="1115" height="628" alt="telnet_connection_failed" src="https://github.com/user-attachments/assets/56d3ff3a-9986-4fc0-bb59-6331cc303e3f" />
+
 
 
 ### 4. Allow SSH (Port 22)
@@ -102,14 +136,32 @@ Expected result → **Connection failed.**
 - Select **Allow the connection**
 - Apply to **Domain, Private, Public**
 - Name rule: ```Allow SSH```
-  
-📸 Screenshot: Allow SSH rule visible in inbound rules list
+
+📸 Screenshot: New inbound rule for **TCP port 22**
+
+<img width="714" height="581" alt="port_22" src="https://github.com/user-attachments/assets/98d69f3b-21b9-4e70-b111-2c4d13316b9c" />
+
+📸 Screenshot: **Allow the connection**
+
+<img width="714" height="581" alt="Allow_connection" src="https://github.com/user-attachments/assets/2da21860-e84e-4b28-9199-917710ee7772" />
+
+📸 Screenshot: **Domain, Private, Public**
+
+<img width="714" height="581" alt="Apply_all" src="https://github.com/user-attachments/assets/b58ed0d1-1566-4792-8a22-babbb46818bb" />
+
+📸 Screenshot: ```Allow SSH```
+
+<img width="714" height="581" alt="Name_SSH" src="https://github.com/user-attachments/assets/38558bfe-8736-4a50-a6b7-079e7ba3030c" />
+
+
 
 
 ### 5. Remove Test Rule
 - Right-click **Block Telnet** rule → **Delete**
   
 📸 Screenshot: Inbound rules list after removal
+
+<img width="1047" height="784" alt="delete_rules" src="https://github.com/user-attachments/assets/7358b8ab-bff5-4ad9-be57-5d2e51d4bb52" />
 
 ------
 
