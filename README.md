@@ -2,6 +2,32 @@
 
 ### 🎯 Objective Configure and test basic firewall rules to allow or block traffic.
 
+## 🗂️ Files
+```bash
+├── README.md
+└── screenshots
+    ├── Allow_connection.png
+    ├── Apply_all.png
+    ├── Blocked.png
+    ├── Name_Block_Telnet.png
+    ├── Name_SSH.png
+    ├── Run_Command.png
+    ├── SSH_allowed.png
+    ├── Select_Port_23.png
+    ├── Windows Defender Firewall.png
+    ├── block_connection.png
+    ├── block_telnet.png
+    ├── cmd.png
+    ├── connection_failed.png
+    ├── delete_rule.png
+    ├── delete_rules.png
+    ├── firewall_status_enable.png
+    ├── new_rule.png
+    ├── port_22.png
+    ├── telnet_blocked.png
+    └── telnet_connection_failed.png
+```
+
 ## 🛠 Tools
 - **UFW (Uncomplicated Firewall)** (Linux)
 - **Windows Defender Firewall** (Windows 10/11)
