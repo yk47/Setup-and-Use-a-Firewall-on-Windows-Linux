@@ -39,7 +39,7 @@ Attempt to connect to port 23:
 ```bash
 telnet localhost 23
 ```
-Expected result → Connection failed.
+Expected result → **Connection failed.**
 
 📸 Screenshot: Telnet connection failed
 <img width="840" height="676" alt="connection_failed" src="https://github.com/user-attachments/assets/356e68a0-6ca9-4fa9-8eed-e1a0e3d6f4a3" />
@@ -65,3 +65,77 @@ sudo ufw delete <rule_number>
 ```
 📸 Screenshot: UFW after deleting Telnet rule
 <img width="1920" height="1051" alt="delete_rule" src="https://github.com/user-attachments/assets/061176b8-7b4a-4613-8482-88e54e533f93" />
+
+------
+
+
+## 🪟 Windows (Windows Defender Firewall) Configuration
+### 1. Open Windows Firewall
+
+Press ```Win + R``` → type ```wf.msc``` → Enter
+
+📸 Screenshot: Windows Defender Firewall with Advanced Security window
+
+
+### 2. Block Telnet (Port 23)
+- Go to **Inbound Rules → New Rule**
+- Select **Port → TCP → Specific local port: 23**
+- Select Block the connection
+- Apply to Domain, Private, Public profiles
+- Name rule: ```Block Telnet```
+  
+📸 Screenshot: Block Telnet rule visible in inbound rules list
+
+
+### 3. Test Telnet Block
+Open ```cmd``` and try:
+```bash
+telnet localhost 23
+```
+Expected result → **Connection failed.**
+
+📸 Screenshot: Telnet connection failed in cmd
+
+
+### 4. Allow SSH (Port 22)
+- Create new inbound rule for **TCP port 22**
+- Select **Allow the connection**
+- Apply to **Domain, Private, Public**
+- Name rule: ```Allow SSH```
+  
+📸 Screenshot: Allow SSH rule visible in inbound rules list
+
+
+### 5. Remove Test Rule
+- Right-click **Block Telnet** rule → **Delete**
+  
+📸 Screenshot: Inbound rules list after removal
+
+------
+
+## 📊 Summary of Results
+- On **Linux (UFW)**:
+    - Telnet (23/tcp) was blocked successfully.
+    - SSH (22/tcp) was allowed.
+    - Rule was removed to restore original state.
+
+- On **Windows (Firewall)**:
+    - Telnet traffic (23/tcp) was blocked.
+    - SSH (22/tcp) was allowed.
+    - Telnet rule was later removed.
+ 
+
+## 🔎 How Firewalls Filter Traffic
+- Firewalls act as gatekeepers for network traffic.
+- They filter packets based on rules that define whether to allow or block traffic.
+- Rules can be based on:
+     - **Ports** (e.g., 22 for SSH, 23 for Telnet)
+     - **Protocols** (TCP/UDP/ICMP)
+     - **IP addresses**
+     - **Applications**
+
+👉 In this project:
+- **Port 23** was blocked to prevent unauthorized Telnet access.
+- **Port 22** was allowed to enable secure SSH connections.
+- This demonstrates how firewalls **secure systems by allowing only necessary services** and blocking others.
+
