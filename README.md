@@ -15,7 +15,9 @@ sudo ufw status
 sudo ufw enable
 ```
 📸 Screenshot: UFW enabled
-<img width="840" height="676" alt="firewall_status_enable" src="https://github.com/user-attachments/assets/0a0197fa-2e45-462e-b266-a144f0cbc578" />
+
+<img width="840" height="676" alt="firewall_status_enable" src="https://github.com/user-attachments/assets/2c0a9473-7967-4f50-944d-cdc37a8a8e40" />
+
 
 
 ### 2. List Current Rules
@@ -23,16 +25,18 @@ sudo ufw enable
 sudo ufw status numbered
 ```
 📸 Screenshot: Current rules list
-<img width="840" height="676" alt="firewall_status_enable" src="https://github.com/user-attachments/assets/6f5ca6bb-9d4d-4670-a373-7119466c78cf" />
 
+<img width="840" height="676" alt="block_telnet" src="https://github.com/user-attachments/assets/dc04147e-8cd0-4d91-b20a-3246078f1966" />
 
 ### 3. Block Telnet (Port 23)
 ```bash
 sudo ufw deny 23/tcp
 ```
 📸 Screenshot: UFW showing Telnet (23/tcp) denied
-<img width="840" height="676" alt="block_telnet" src="https://github.com/user-attachments/assets/07f193f9-6fa9-4efe-b176-c3450c02a70b" />
 
+<img width="840" height="676" alt="block_telnet" src="https://github.com/user-attachments/assets/dc04147e-8cd0-4d91-b20a-3246078f1966" />
+
+<img width="840" height="676" alt="telnet_blocked" src="https://github.com/user-attachments/assets/62361923-dc4c-456e-b0ad-b556b6c409ff" />
 
 ### 4. Test Telnet Block
 Attempt to connect to port 23:
@@ -42,7 +46,8 @@ telnet localhost 23
 Expected result → **Connection failed.**
 
 📸 Screenshot: Telnet connection failed
-<img width="840" height="676" alt="connection_failed" src="https://github.com/user-attachments/assets/356e68a0-6ca9-4fa9-8eed-e1a0e3d6f4a3" />
+
+<img width="840" height="676" alt="connection_failed" src="https://github.com/user-attachments/assets/05134ab2-87d3-4305-823d-2e5e5ebc36da" />
 
 
 
@@ -51,7 +56,8 @@ Expected result → **Connection failed.**
 sudo ufw allow 22/tcp
 ```
 📸 Screenshot: UFW showing SSH (22/tcp) allowed
-<img width="840" height="676" alt="SSH_allowed" src="https://github.com/user-attachments/assets/d858f75f-e50d-42c2-b4f9-437d65d0db8c" />
+
+<img width="840" height="676" alt="SSH_allowed" src="https://github.com/user-attachments/assets/a91d5db5-44af-4142-ad42-78343d610f1f" />
 
 
 ### 6. Remove Telnet Block Rule
@@ -64,7 +70,9 @@ Then delete the Telnet rule (replace <rule_number> with actual number):
 sudo ufw delete <rule_number>
 ```
 📸 Screenshot: UFW after deleting Telnet rule
-<img width="1920" height="1051" alt="delete_rule" src="https://github.com/user-attachments/assets/061176b8-7b4a-4613-8482-88e54e533f93" />
+
+<img width="1925" height="1051" alt="delete_rule" src="https://github.com/user-attachments/assets/35cc8a27-f0f0-446d-a6a6-eb04f2aad445" />
+
 
 ------
 
