@@ -1,4 +1,4 @@
-# 🔒 Firewall Setup and Testing (Windows/Linux)
+# 🔒🧱 Firewall Setup and Testing (Windows/Linux)
 
 ### 🎯 Objective Configure and test basic firewall rules to allow or block traffic.
 
